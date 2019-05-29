@@ -1,9 +1,15 @@
 # CentOS 7 Image with Python 3
 
+To build the image:
+
+``` bash
+sudo docker build . -t tomtec/centospy
+```
+
 Run a container with:
 
 ``` bash
-sudo docker run -it --user pyuser -p 8888:8888 -v /your/shared/directory:/share tomtec/centospy3
+sudo docker run -it --rm --user pyuser -p 8888:8888 -v /your/shared/directory:/share tomtec/centospy3
 ```
 
 ## Directory sharing
